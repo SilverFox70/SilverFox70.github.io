@@ -1,4 +1,31 @@
 body {
-	background-color: red;
+	background-color: #7D8182;
+}
 
+#alt_nav {
+	float: right;
+}
+
+#alt_nav ul li {
+	display: inline;
+	font-family: Verdana, sans-serif;
+	margin: 1em;
+}
+
+#alt_nav ul li a {
+		text-decoration: none;
+		color: white;
+		-webkit-transition: color 1s; /* for Safari 3.1 to 6.0 */
+		transition: color 1s;
+}
+
+#alt_nav ul li a:hover {
+	color: #A0C5EA;
+	text-shadow: 2px 2px 5px #383834;
+}
+
+#splash h1 {
+	font-family: Roboto, Verdana, sans-serif;
+	font-size: 2em;
+	margin-left: 1%;
 }
