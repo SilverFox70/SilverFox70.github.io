@@ -63,6 +63,21 @@ body {
 	padding: .1% 0.5% 0.5% 0.5%;
 }
 
+#main_nav a {
+	font-decoration: none;
+	color: black;
+}
+
+#main_nav #blog:hover {
+	background-color: #D6894F;
+}
+
+#blog {
+	background-color: #CC6C23;
+	-webkit-transition: background-color 1s; /* for Safari 3.1 to 6.0 */
+	transition: background-color 1s;
+}
+
 #social_nav ul li {
 	display: inline;
 	font-family: Verdana, sans-serif;
