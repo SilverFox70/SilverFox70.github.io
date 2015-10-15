@@ -40,17 +40,17 @@ body {
 .background-image img {
 	/*background: url(imgs/Iceland_Vik2.jpg) no-repeat center center fixed;*/
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 	float: center;
 	border: 1px solid black;
 	padding: 0px;
-	top: 0;
+	/*top: 0;
 	left: 0;
 	min-width: 100%;
-	min-height: 100%;
+	min-height: 100%;*/
 }
 
 #main_nav section {
@@ -134,11 +134,35 @@ body {
 	text-shadow: 2px 2px 5px #383834;
 }
 
-#social_nav ul li {
-	display: inline;
+#social_nav {
 	font-family: Verdana, sans-serif;
+	font-size: .75em;
+	color: white;
+	padding: .1% 1% 1% 1%;
+}
+
+#social_nav ul li {
+	width: 1em;
+	height: 2em;
+	display: inline;
 	margin: 1em;
 }
 
+#social_nav a {
+	text-decoration: none;
 
+}
+
+#social_nav img {
+	position: relative;
+	width: 3%;
+	height: 3%;
+	-webkit-transition: width .5s, height .5s; /* for Safari 3.1 to 6.0 */
+	transition: width .5s, height .5s;
+}
+
+#social_nav img:hover {
+	width: 4%;
+	height: 4%;
+}
 
