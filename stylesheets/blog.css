@@ -11,19 +11,20 @@ p {
 }
 
 .list {
+	border: 1px solid black;
 	font-family: Verdana, sans-serif;
 	margin: 1%;
 }
 
 .list div {
+	vertical-align: top;
 	display: inline-block;
 	border: 2px solid black;
 	padding: 10px;
 }
 
-#leftside {
-	position: absolute;
-	top: 0;
+.list #leftside {
+
 }
 
 #rightside {
@@ -35,10 +36,7 @@ p {
 }
 
 #skoga {
-	/*float:right;*/
 	background: contain;
-	/*width: 50%;
-	height: 50%;*/
 }
 
 .list ul li {
