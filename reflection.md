@@ -1,0 +1,16 @@
+##What did you learn about CSS padding, borders, and margin by doing this challenge?
+
+While I thought that I understood the concepts well, it was a very different thing to actually try to get elements to look the way I wanted, and that is true for these concepts as well as positioning concepts.  I found it useful to temporarily add border: 1px solid black to many elements so that I could see exactly why the content of an element was behaving the way it was and why elements were interacting with each other the way they were.  I am still confused at times why it appears that there is top padding even when I have padding set to zero for certain elements.
+
+
+##What did you learn about CSS positioning?
+
+Positioning is much easier when there is less hierarchy in the structure of your page, I have found.  For example, the Chrome DevTools challenge was easy and fun, in large part because I believe the structure of the page is so simple.  Once you start working with children of children elements, positioning gets a lot more finnicky.  I can't tell you how many times I spent a good twenty minutes trying to budge an element *anywhere* only to discover that what I really had to do was position the parent element.  It is making me think a lot more about page structure and semantics, for sure!  I did this exercise before Challenge 3.4, so I am hoping to go back and make some positioning changes based on what I learned over there.
+
+##What aspects of your design did you find easiest to implement? What was most difficult?
+
+It took me a while to figure out that I was doing my background picture all wrong.  That required an entire re-thinking of the page in some ways.  It seems obvious now that a background image wants to live in the body, but I had it an a separate container at first.  My header nav bar was the easiest and came together very quickly.  What I call my main_nav section is still a work in progress, but I eventually got it to be in the general area and format I wanted it in.  The bottom social nav is being a little weird (you'll see if you play with it) and I am still wrapping my head around how to deal with that.
+
+##What did you learn about adding and formatting elements with CSS in this challenge?
+
+Semantics/structure of your page is going to influence how you go about formatting in CSS.  While specificity counts, there are other precedences, and the order of the CSS rules themselves can make unexpected things happen.  Some elements came together very quickly while I am still struggling with others.  I did not pre-plan everything well enough and I feel I could have been a lot more efficient with my CSS if I'd had a more unified plan across the index.html, blog_index.html, and blogpage.html.  Some of this has to do with the fact that I developed the wireframes and templates for each in isolation from one another.  Had I thought about the wholistic site, it would have been easier to maintain and format.  On the other hand, I was pleased that it was so easy to copy header and social nav html from one file to another and have the css predictably render it appropriately across several pages.  That felt like a big win!
