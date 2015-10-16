@@ -49,6 +49,21 @@ p {
 	color: black;
 }
 
+main {
+	font-family: Verdana, sans-serif;
+	line-height: 1.5em;
+	margin: 1%;
+	padding: 1%;
+}
+
+main h2 {
+	font-style: italic;
+}
+
+.main_article {
+	text-align: justify;
+}
+
 footer {
 }
 
