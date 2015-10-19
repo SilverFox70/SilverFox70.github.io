@@ -69,6 +69,46 @@ footer {
 
 footer #social_nav {
 	/*border: 1px solid red;*/
-	vertical-align: bottom;
+	position: relative;
+	bottom: 0;
+	left: 1%;
 }
 
+code {
+	font-size: 1.25em;
+}
+
+#example {
+	background-color: green;
+}
+
+#boxmodel {
+	position: relative;
+	width: 40%;
+	left: 30%;
+}
+
+#par1 {
+	margins: 10px;
+	padding: 0;
+	background-color: blue;
+}
+
+#par2 {
+	padding: 10px;
+	margin: 0;
+	background-color: green;
+}
+
+#par3 {
+	margin: 40px;
+	padding: 20px;
+	background-color: aqua;
+	border: 1px black solid;
+}
+
+#par4 {
+	margin: 0;
+	padding: 0px;
+	background-color: violet;
+}
