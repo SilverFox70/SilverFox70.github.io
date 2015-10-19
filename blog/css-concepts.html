@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' text='text/css'>
+    <title>WFB's Blog: Margins, Borders, and Padding</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <div id="top-block">
+         <nav id="alt_nav">
+          <ul>
+            <li><a href="http://silverfox70.github.io">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section id="splash">
+          <h1>William Brinkert's Blog</h1>
+          <p>Devloper/Designer In Training</p>
+        </section>
+    </div>
+
+
+    <main>
+      <h1>Fundamentals of Margin, Border, and Padding</h1>
+      <h2>Almost every HTML element has them...</h2>
+      <h4>October 18, 2015</h4>
+
+      <article class="main_article">
+        <p>First, let's talk about two different kinds of HTML elements: "block level" and "inline" elements. Block level content occupies the entire space of of its parent, must appear only within a &lt;body&gt; element, and most browsers will place a newline both before and after the element.  So, when you view it, it looks like a block.  For example:</p>
+
+        <p><code>&lt;p&gt;A paragraph is a block level element; the background has been colored to make it more visible&lt;/p&gt;</code>     
+        </p>
+
+        <p id="example">A paragraph is a block level element; the background has been colored to make it more visible</p>
+
+        <p>Block level elements by default begin on new lines, but inline elements can start anywhere in a line.  Another way to think about it is that block level elements are the containers which hold content while inline elements deal with phrasing content within these block level containers. 
+        </p>
+
+        <p>But our focus today is on block level HTML5 elements, although they are admittedly not called such past HTML4.  Some examples are &lt;body&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;section&gt;, and &lt;div&gt; among others. For a complete list, check out this <a href="http://www.tutorialchip.com/tutorials/html5-block-level-elements-complete-list">page</a>.  As you can see in the example above, the paragraph element creates a block.  You should also note that by default the block takes up the entire width of the screen.  All blocks have margins, a border (although it may be invisible), and padding.  So what are these things?  Let's take a look at a diagram.  
+        </p>
+
+        <p><img id="boxmodel" src="imgs/TheBoxModel.png" alt="Diagram of the Box Model"></p>  
+
+        <p>The content is whatever you have placed inside the element, whether that is text or a picture, for example.  Between your content and the border we have padding.  It creates "white" space between your content and the border to give you some breathing room.  Of course, you don't always choose to display an actual border around your elements, but in a sense this border always exists as the boundary between the padding and the margin.  Which brings us to what the margin actually is.  The margin is the transparent buffer outside of the border; it gives each element breathing room from nearby elements.  Without a margin, elements will bunch up as close as they can without overlapping.</p>
+
+        <p>To illustrate, take a look at the three examples below:</p>
+
+        <p id="par1">This is a paragraph with 0 padding, and 10px margins</p>
+
+        <p id="par2">This a paragraph with 10px padding and 0 margins</p>
+
+        <p id="par4">This paragraph has 0 margins and 0 padding</p>
+
+        <p id="par3">This last paragraph has 40px margins and 20px padding with a border</p>
+
+          <!-- copy and paste as many times as you want to add paragraphs -->
+      </article>
+    </main>
+
+    <footer>
+      <!-- Footer notes and copyright stuff goes here -->
+      <nav id="social_nav">
+        <h1>Follow me on:</h1>
+        <ul>
+          <li><a href="https://www.facebook.com/bill.brinkert">
+              <img src="../imgs/facebook-icon.png" alt="Facebook" >
+            </a></li>
+          <li><a href="https://twitter.com/wfbrinkert">
+              <img src="../imgs/twitter-icon.png" alt="Twitter" >
+            </a></li>
+          <li><a href="https://www.linkedin.com/in/billbrinkert">
+              <img src="../imgs/linkedin-icon.png" alt="LinkedIn" >
+            </a></li>
+        </ul>
+      </nav>
+    </footer> 
+
+
+  </body>
+
+</html>  
