@@ -74,6 +74,11 @@ footer #social_nav {
 	left: 1%;
 }
 
+footer #social_nav ul li img {
+	width: 2%
+	height: 2%;
+}
+
 code {
 	padding: .5%;
 	font-size: 1.25em;
