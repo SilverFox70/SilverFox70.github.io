@@ -75,8 +75,14 @@ footer #social_nav {
 }
 
 code {
+	padding: .5%;
 	font-size: 1.25em;
+	color: snow;
+	background-color: #2F4F4F;
+	/*border-radius: 15%;*/
 }
+
+/*Below is formatting specific to the css-concepts.html page*/
 
 #example {
 	background-color: green;
@@ -111,4 +117,18 @@ code {
 	margin: 0;
 	padding: 0px;
 	background-color: violet;
+}
+
+/*Below is formatting specific to the arrays-hashes.html page */
+
+span .bold {
+	font-style: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.green {
+	color: #77FF4A;
 }

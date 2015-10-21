@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' text='text/css'>
+    <title>WFB's Blog: Arrays and Hashes</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <div id="top-block">
+         <nav id="alt_nav">
+          <ul>
+            <li><a href="http://silverfox70.github.io">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section id="splash">
+          <h1>William Brinkert's Blog</h1>
+          <p>Devloper/Designer In Training</p>
+        </section>
+    </div>
+
+
+    <main>
+      <h1>Arrays and Hashes</h1>
+      <h2>Keeping lots of data in order</h2>
+      <h4>October 21, 2015</h4>
+
+      <article class="main_article">
+        <p>Without variables, programming computers to do anything would be very tedious.  Variables make code flexible and re-useable, which is highly desirable.  But sometimes we need to store a large amount of data, and the humble old variable just isn't going to cut it.  For example, imagine trying to calculate a student's grade average using variables like this:
+        </p>
+
+        <code>
+          test_1 = 78                                                   <br>
+          test_2 = 84                                                   <br>
+          test_3 = 91                                                   <br>
+          test_4 = 76                                                   <br>
+          test_5 = 87                                                   <br>
+
+          grade_avg = (test_1 + test_2 + test_3 + test_4 + test_5) / 5  <br>
+        </code>
+
+        <p>Not only is that a lot of variables, but the code is inflexible.  What if the teacher gives out six tests next time?  You'd have to re-write the code just to deal with that.  And in reality, as a programmer you are often dealing with much more than just five pieces of data.  Think hundreds, thousands, and even millions.  There's just no way to do that with any grace using the plain old variable.
+        </p>
+
+        <p>Fortunately, there are some things that we can use.  Let's take a look at an array first.  Arrays are containers that can hold many distinct data values.  How many?  Well, the sky, or your computer's memory capacity, are the limits, but suffice it to say, you can store a lot of discreet data in an array.  Arrays do this with indexes.  Let's take a look at what an array in Ruby can look like:
+        </p>
+
+        <code>
+          my_array = [1, 2, 3, 4, 5]
+        </code>
+
+        <p>That's a pretty basic array.  So what is going on here?  We have 5 integers stored in an array called <code>my_array</code>.  Cool!  In Ruby, we could have a mix of integers, floats, strings, or a number of other objects in that array.  We can even mix and match - unlike some other languages which require all elements of an array be of the same data type, Ruby is flexible.  You can even have an array that is full of arrays!  But let's not get ahead of ourselves just yet.</p>
+
+        <p>We have an array, and we stored some values in it, but now how do we access those values?  This is where it can be a little tricky.  You access the various values in an array using an index.  The starting index of an array is <span class="bold">always</span> zero.  100% of the time.  Yes, it can seem a little odd to think that the first element in an array is at index 0 rather than index 1, but you will get used to it over time and with practice.  So, if we wanted to access that 3 that we stored in <code>my_array</code> we would do this:  
+        </p>  
+
+        <code>
+          my_array[2]   <span class="green">#=> 3</span> 
+        </code>
+
+        <p class="italic">Note: the funny little <span class="green">#=></span> is just a way of saying "All that stuff on left will give you this value on the right".  You'll see this convention in Ruby API docs.  Check out the documentation for Arrays in Ruby <a href="http://ruby-doc.org/core-2.20/Array.html">here</a>.
+        </p>
+
+        <p>As you can see, when we look at what's stored at index 2 of the array, we find the value 3.  What do you think we would find at index 0?  If you guessed 1, you're correct!  But what happens if we look for something at index 7?  There is no index 7, there's nothing there.  Literally, not even zero.  The value would be return to us as nil, which is a computer's special way of saying "absolutely nothing".  Therefore, in general you want to be sure to stay within the bounds of your array because things can get funky fast, and maybe even crash your program.
+        </p>
+
+        <p>As luck would have it, we have ways to stay "in bounds" with arrays.  Suppose I were to give you an array and ask you to find out how big it is?  Ruby, and most other languages, gives us a simple way to do this.  To find the length of our array above, I could use <code>my_array.length</code>, which would return 5, because that's how many elements there are.  But remember, the largest index value for my_array is 4.</p>
+
+          <!-- copy and paste as many times as you want to add paragraphs -->
+      </article>
+    </main>
+
+    <footer>
+      <!-- Footer notes and copyright stuff goes here -->
+      <nav id="social_nav">
+        <h1>Follow me on:</h1>
+        <ul>
+          <li><a href="https://www.facebook.com/bill.brinkert">
+              <img src="../imgs/facebook-icon.png" alt="Facebook" >
+            </a></li>
+          <li><a href="https://twitter.com/wfbrinkert">
+              <img src="../imgs/twitter-icon.png" alt="Twitter" >
+            </a></li>
+          <li><a href="https://www.linkedin.com/in/billbrinkert">
+              <img src="../imgs/linkedin-icon.png" alt="LinkedIn" >
+            </a></li>
+        </ul>
+      </nav>
+    </footer> 
+
+
+  </body>
+
+</html>  
