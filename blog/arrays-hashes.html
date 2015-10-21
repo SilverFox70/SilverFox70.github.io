@@ -52,7 +52,7 @@
         <p>Not only is that a lot of variables, but the code is inflexible.  What if the teacher gives out six tests next time?  You'd have to re-write the code just to deal with that.  And in reality, as a programmer you are often dealing with much more than just five pieces of data.  Think hundreds, thousands, and even millions.  There's just no way to do that with any grace using the plain old variable.
         </p>
 
-        <p>Fortunately, there are some things that we can use.  Let's take a look at an array first.  Arrays are containers that can hold many distinct data values.  How many?  Well, the sky, or your computer's memory capacity, are the limits, but suffice it to say, you can store a lot of discreet data in an array.  Arrays do this with indexes.  Let's take a look at what an array in Ruby can look like:
+        <p>Fortunately, there are some things that we can use.  Let's take a look at an array first.  Arrays are containers that can hold many distinct data values, called elements.  How many?  Well, the sky, or your computer's memory capacity, are the limits, but suffice it to say, you can store a lot of discreet data in an array.  Arrays do this with indexes.  Let's take a look at what an array in Ruby can look like:
         </p>
 
         <code>
@@ -74,7 +74,62 @@
         <p>As you can see, when we look at what's stored at index 2 of the array, we find the value 3.  What do you think we would find at index 0?  If you guessed 1, you're correct!  But what happens if we look for something at index 7?  There is no index 7, there's nothing there.  Literally, not even zero.  The value would be return to us as nil, which is a computer's special way of saying "absolutely nothing".  Therefore, in general you want to be sure to stay within the bounds of your array because things can get funky fast, and maybe even crash your program.
         </p>
 
-        <p>As luck would have it, we have ways to stay "in bounds" with arrays.  Suppose I were to give you an array and ask you to find out how big it is?  Ruby, and most other languages, gives us a simple way to do this.  To find the length of our array above, I could use <code>my_array.length</code>, which would return 5, because that's how many elements there are.  But remember, the largest index value for my_array is 4.</p>
+        <p>As luck would have it, we have ways to stay "in bounds" with arrays.  Suppose I were to give you an array and ask you to find out how big it is?  Ruby, and most other languages, gives us a simple way to do this.  To find the length of our array above, I could use <code>my_array.length</code>, which would return 5, because that's how many elements there are.  But remember, the largest index value for my_array is 4, because the first element is stored at index 0.</p>
+
+        <p>So how can we use the power of arrays to help us do things?  Remember how much code we had to write to store five test grades for a student with varibale?  Take a look above if you need a refresher, then check this out:</p>
+
+        <code>my_array = [78, 84, 91, 76, 87]<br>
+          grade_avg = (my_array.inject(0) {| sum, grade | sum + grade }/ my_array.length
+        </code>
+
+        <p>We won't dig too deeply into what exactly is going here, but basically inject is iterating over each element (grade) in the array and adding it to the variable sum.  That then returns the sum of all grades, which we then divide by the number of grades (elements) to get an average - as an integer, mind you.  That's a lot less code!  Not only is it easier to maintain, but it is extensible.  Our current array has only five elements, but our code doesn't care if it is 1 or 1 million elements inside that array, it will still work just fine.</p>
+
+        <p>You might now be wondering how we could add or remove elements from an array.  Ruby is very flexible and forgiving about this, so enjoy that.  Java, C++, and other languages generally require you to declare an array's size when you create the array.  But in Ruby it is very simple.</p>
+
+        <p>To add an element to an array:</p>
+
+        <code>my_array.push(element)</code>
+
+        <p>To remove a single element:</p>
+
+        <code>my_array.pop()</code>
+
+        <p>I should note that these methods "push" an element onto the end of the array, or "pop" an element off of the end of the array.  If you wanted to insert something into a specific index in your array, you should use this:</p>
+
+        <code>my_array.insert(index, element)</code>
+
+        <p>With insert, the index you provide as an argument is the index at which your element will now appear.  All of the elements from the insert point to the end of the array shift up one index.</p>
+
+        <h3>Hashes</h3>
+
+        <p>Arrays are truly great and powerful, but in order to access the elements we need to provide an index, and an index is just a number.  That makes getting to data a little abstract, now doesn't it?  What if we had a contact list like this:</p>
+
+        <p>John S.   555-555-7987<br>
+          Ben P. 555-555-4513<br>
+          Jules W. 555-555-2424<br>
+        </p>
+
+        <p>We could store the phone numbers in an array easily enough.  But then we would need a way to relate the name with the phone number.  You could do this in array form a little something like...</p>
+
+        <code>contact_list = [["John S.", "555-555-7987"],["Ben P.", "555-555-4513"],["Jules W.", "555-555-2424"]]</code>
+
+        <p>But that is tedious and would require conditional code to find the person you were looking for in the array in order to retrieve their phone number.  There is a better way!  Welcome to hashes.  This is how we make that into a hash:</p>
+
+        <code>contact_list = ["John S." => "555-555-7987", "Ben P." => "555-555-4513", "Jules W.", "555-555-2424"]</code>
+
+        <p>Hashes are collections of key/values pairs.  Above, the names are the keys and the phone numbers are the values.  The drawback here is that each key MUST be unique, or you are going to run into errors or unexpeected results.  You can think of hashes as being like mini-databases, if that helps.  With our contact_list in a hash, I can find a phone number as simple as this:</p>
+
+        <code>contact_list["Ben P."]  <span class="green">#=> "555-555-4513"</span></code>
+
+        <p>Hashes are powerful tools and great to use when you have a distince key/value relationship between data.  However, you can harness their power to pull off some really neat tricks.  Let's take a look at two last examples.  Below you see the code for a simple binary calculator.</p>
+
+        <img src="imgs/bincalc_1.png" alt="Program example one">
+
+        <p>Two binary values are passed to the method calculate along with an operation.  A simple case statement handles the logic and determines which operation to actually perform.  But, if we use hashes, we can do the following:</p>
+
+        <img src="imgs/bincalc_2.png" alt="Program example two">
+
+        <p>What's going on here? Well, our hash keys relate to the name of the operation we would like the method to perform.  Our values are what is a little special here. Instead of data, the value part of each key/value pair is actually referencing a function.  (Remember that in Ruby, math operators are functions).  So when it sees the key "add", it finds the method for addition, the + symbol.  Of course, some of the magic here is in the "send", which is a little beyond the scope of what we are talking about.  But, you could take that snippet of code and turn it into a full blown regular calculator quite easily. note:(I made it an image on purpose, just so that you would have to type it yourself if you want to try it out - doing is learning!)</p>
 
           <!-- copy and paste as many times as you want to add paragraphs -->
       </article>
