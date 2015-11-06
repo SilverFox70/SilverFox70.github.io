@@ -50,6 +50,9 @@ p {
 }
 
 main {
+	position: relative;
+	width: 60%;
+	left: 20%;
 	font-family: Verdana, sans-serif;
 	line-height: 1.5em;
 	margin: 1%;
@@ -74,10 +77,10 @@ footer #social_nav {
 	left: 1%;
 }
 
-footer #social_nav ul li img {
+/*footer #social_nav ul li img {
 	width: 2%
 	height: 2%;
-}
+}*/
 
 code {
 	padding: .5%;

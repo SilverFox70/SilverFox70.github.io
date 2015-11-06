@@ -189,8 +189,8 @@ body {
 
 #social_nav img {
 	position: relative;
-	width: 10%;
-	height: 10%;
+	/*width: 10%;
+	height: 10%;*/
 	-webkit-transition: width .5s, height .5s; /* for Safari 3.1 to 6.0 */
 	transition: width .5s, height .5s;
 }
