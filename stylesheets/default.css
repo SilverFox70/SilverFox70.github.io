@@ -67,6 +67,57 @@ body {
 	margin-left: 1%;
 }
 
+#projectstitle {
+	font-family: Roboto, Verdana, sans-serif;
+	padding: 2%;
+}
+
+#projectlist div {
+	display: inline-block;
+	height: 30%;
+}
+
+#projectlist a {
+	text-decoration: none;
+	color: black;
+}
+
+#proj_1 {
+	position: relative;
+	background-color: salmon;
+	width: 12%;
+	height: 20%;
+	left: 5%;
+	padding: 1%;
+}
+
+#proj_2 {
+	position: relative;
+	background-color: DarkOrange;
+	width: 12%;
+	height: 20%;
+	left: 15%;
+	padding: 1%;
+}
+
+#proj_3 {
+	position: relative;
+	background-color: Thistle;
+	width: 12%;
+	height: 20%;
+	left: 25%;
+	padding: 1%;
+}
+
+#proj_4 {
+	position: relative;
+	background-color: Turquoise;
+	width: 12%;
+	height: 20%;
+	left: 35%;
+	padding: 1%;
+}
+
 /*.background-image img {
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
