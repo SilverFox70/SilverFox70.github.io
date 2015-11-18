@@ -1,0 +1,77 @@
+h1 {
+	font-family: Roboto, Verdana, sans-serif;
+	font-size: 2em;
+	color: #FEFEFE;
+	margin: 1% 1% -1% 1%;
+	/*border: 2px solid black;*/
+}
+
+p {
+	/*border: 2px solid black;*/
+}
+
+main {
+	position: relative;
+	width: 90%;
+	height: 34em;
+	top: -2em;
+	left: 3.5%;
+	font-family: Verdana, sans-serif;
+	line-height: 1.5em;
+	margin: 1%;
+	padding: 1%;
+}
+
+.main_article {
+	text-align: justify;
+}
+
+main div {
+	display: inline-block;
+	padding: 1%;
+	border: 1px;
+	border-style: ridge;
+	border-color: red;
+}
+
+main a {
+	text-decoration: none;
+	color: black;
+}
+
+#ruby {
+	position: relative;
+	left: 0%;
+	top: 2em;
+	width: 26%;
+	height: 60%;
+	background-color: silver;
+}
+
+#js {
+	position: relative;
+	left: 7%;
+	top: -8em;
+	width: 26%;
+	height: 60%;
+	background-color: silver;
+}
+
+#other {
+	position: relative;
+	left: 14%;
+	top: -8em;
+	width: 26%;
+	height: 60%;
+	background-color: silver;
+}
+
+footer {
+}
+
+footer #social_nav {
+	/*border: 1px solid red;*/
+	position: relative;
+	bottom: 0;
+	left: 1%;
+}
