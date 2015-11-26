@@ -131,7 +131,7 @@ body {
 
 #main_nav {
 	position: relative;
-	bottom: 15%;
+	top: 20em;
 }
 
 #main_nav section {
