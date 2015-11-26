@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' text='text/css'>
+    <title>WFB's Blog: Regex</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <div id="top-block">
+         <nav id="alt_nav">
+          <ul>
+            <li><a href="http://silverfox70.github.io">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section id="splash">
+          <h1>William Brinkert's Blog</h1>
+          <p>Devloper/Designer In Training</p>
+        </section>
+    </div>
+
+
+    <main>
+      <h1>An Introduction to REGEX</h1>
+      <h2>A couple of basics...</h2>
+      <h4>November 20, 2015</h4>
+
+      <article class="main_article">
+        <p>RegEx are "Regular Expressions", but they will hardly seem regular to anyone new to the concept. So, what are they?  Regular expressions are specially formatted strings that describe a pattern, and you can use them to find matches within another body of text.  That may not sound exciting to start with, but they are an extremely valuable tool once you learn how to read and write them.  
+        </p>
+
+        <p>First, let's tackle a common challenge that beginning programmers are asked to solve without using regex - the old "insert commas into this long number" problem.  Now, without regular expressions we have to use good, plain old problem solving algorithms.  That's why it is a common challenge given to beginners.  But while that is good programming practice, it is not really the way you would want to solve the problem in 9 out of 10 cases.  So what would work in Ruby using regex?
+        </p>
+
+        <img src="imgs/inscom.png" alt="insert commas code">
+
+        <p>Let's explore what is happening line by line...</p>
+
+        <p>On line 1 we define our method, nothing special to see here.  Line 2 simply makes our method more robust by allowing it to accept either a numeric value or a string value; in either case we ensure that what we are passing to the next line is in fact a string.  Line 3 - Ah, here is where the work is done!  We call #gsub! on our number as a string and pass it a regular expression as the first argument and what we would like to have substituted or inserted as the second argument.  If you need a brush up on #gsub!, check it out <a href="http://ruby-doc.org/core-2.0.0/String.html#method-i-gsub-21">here</a>.  
+        </p>  
+
+        <p>So where does the regular expression begin and end?  Well, it everything between the two / forward slashes.  In other words our regex here is <span class="green">/(\d)(?=(\d\d\d)+(?!\d))/</span>.
+        </p>
+
+        <p>It says, if we have a digit <span class="green">(\d)</span> that is followed by three more digits <span class="green">(?=(\d\d\d)</span> that is also NOT followed by a single digit <span class="green">(?!\d)</span>, then we have a match.  And what do we do if we have a match?  Well, <span class="green">"\\0,"</span> tells #gsub! to not add anything else, but to put in that comma that you see after the zero.  It should be noted that this is not the only way to write a regex to find the matches and insert commas, but this one works. 
+        </p>
+
+        <p>Simple, right?  If you're shaking your head "no", don't worry!  Learning regular expressions is like learning a whole new language in some ways, but it will come to you pretty easily if you play around with it and see what happens.  A great resource for playing around with this is <a href="http://rubular.com">Rubular.com</a>.  They also have a nice quick reference for typical kinds of regex, and you can play around with building your own.
+        </p>
+
+        <p>But maybe you don't think that adding commas into numbers-as-strings is very exciting after all.  What about being able to scrape through a document or even a webpage and extract all of the emails in that text?  Let me show you a very basic way to do this:
+        </p>
+
+        <img src="imgs/exemail.png" alt="email code example">
+
+        <p>This method takes a string, gets rid of commas (you might want to also get rid of some other punctuation, but this is just an example), splits the string into an array, and then, on line 24 uses #grep to search through the array to find matches.  Matches of what exactly?  <span class="green">[a-zA-Z0-9]</span> is looking for any matches of upper and lower case letters or numbers.  The "@" must be present exactly like that, in the middle.  Then it wants another matches for all letters and numbers followed by a "." and then finally, any other combination of letters and numbers.  You can see from the output (lines 28 and 29) that finds this pattern in the text passed to it and returns just the stuff that matches, which happens to be in the general form of an email address.  Now, you could certainly make this a lot more fancy and explicit so as to avoid things that might look like email addresses, but are in fact not.  In other words, this isn't a production code example, but it does show how regex can be used.
+        </p>
+
+
+          <!-- copy and paste as many times as you want to add paragraphs -->
+      </article>
+    </main>
+
+    <footer>
+      <!-- Footer notes and copyright stuff goes here -->
+      <nav id="social_nav">
+        <h1>Follow me on:</h1>
+        <ul>
+          <li><a href="https://www.facebook.com/bill.brinkert">
+              <img src="../imgs/facebook.png" alt="Facebook" >
+            </a></li>
+          <li><a href="https://twitter.com/wfbrinkert">
+              <img src="../imgs/twitter.png" alt="Twitter" >
+            </a></li>
+          <li><a href="https://www.linkedin.com/in/billbrinkert">
+              <img src="../imgs/linkedin.png" alt="LinkedIn" >
+            </a></li>
+          <li><a href="https://github.com/SilverFox70">
+              <img src="../imgs/github.png" alt="LinkedIn" >
+            </a></li> 
+          <li><a href="https://www.gmail.com/in/billbrinkert">
+              <img src="../imgs/gmail.png" alt="LinkedIn" >
+            </a></li>     
+        </ul>
+      </nav>
+    </footer> 
+
+
+  </body>
+
+</html>  
