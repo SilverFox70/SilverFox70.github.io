@@ -72,6 +72,12 @@ body {
 	padding: 2%;
 }
 
+#projectlist {
+	font-family: Roboto, Verdana, sans-serif;
+	position: relative;
+	top: 10em;
+}
+
 #projectlist div {
 	display: inline-block;
 	height: 30%;
@@ -85,8 +91,9 @@ body {
 #proj_1 {
 	position: relative;
 	background-color: salmon;
+	border: 2px outset DarkSlateGray;
 	width: 12%;
-	height: 20%;
+	height: 2em;
 	left: 5%;
 	padding: 1%;
 }
@@ -94,8 +101,9 @@ body {
 #proj_2 {
 	position: relative;
 	background-color: DarkOrange;
+	border: 2px outset DarkSlateGray;
 	width: 12%;
-	height: 20%;
+	height: 8em;
 	left: 15%;
 	padding: 1%;
 }
@@ -103,8 +111,9 @@ body {
 #proj_3 {
 	position: relative;
 	background-color: Thistle;
+	border: 2px outset DarkSlateGray;
 	width: 12%;
-	height: 20%;
+	height: 2em;
 	left: 25%;
 	padding: 1%;
 }
@@ -112,8 +121,9 @@ body {
 #proj_4 {
 	position: relative;
 	background-color: Turquoise;
+	border: 2px outset DarkSlateGray;
 	width: 12%;
-	height: 20%;
+	height: 2em;
 	left: 35%;
 	padding: 1%;
 }
@@ -268,4 +278,6 @@ body {
     -moz-box-shadow: 3px 3px 3px #111111;
     -webkit-box-shadow: 3px 3px 3px #111111;
 }
+
+
 
